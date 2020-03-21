@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h3>Select two Starships from the dropdown lists to compare</h3>
+    <select id="select1">
+        <option value="2">CR90 Corvette</option>
+        <option value="75">V-wing</option>
+        <option value="74">Belbullab-22 Starfighter</option>
+        <option value="65">Jedi Interceptor</option>
+        <option value="3">Star Destroyer</option>
+        <option value="59">Trade Fedaration Cruiser</option>
+        <option value="58">Solar Sailer</option>
+        <option value="63">Republic Attack Cruiser</option>
+        <option value="28">A-wing</option>
+        <option value="29">B-wing</option>
+        <option value="39">Naboo Fighter</option>
+        <option value="10">Millenium Falcon</option>
+    </select>
+    <select id="select2">
+        <option value="2">CR90 Corvette</option>
+        <option value="75">V-wing</option>
+        <option value="74">Belbullab-22 Starfighter</option>
+        <option value="65">Jedi Interceptor</option>
+        <option value="3">Star Destroyer</option>
+        <option value="59">Trade Fedaration Cruiser</option>
+        <option value="58">Solar Sailer</option>
+        <option value="63">Republic Attack Cruiser</option>
+        <option value="28">A-wing</option>
+        <option value="29">B-wing</option>
+        <option value="39">Naboo Fighter</option>
+        <option value="10">Millenium Falcon</option>
+    </select>
+    <button id="button">Compare</button>
+    <br/><br/>
+    <table border="1px solid">
+        <tr>
+            <th></th>
+            <th>Starship 1</th>
+            <th>Starship 2</th>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td id="data_1_name"></td>
+            <td id="data_2_name"></td>
+        </tr>
+        <tr>
+            <td>Cost</td>
+            <td id="data_1_cost"></td>
+            <td id="data_2_cost"></td>
+        </tr>
+        <tr>
+            <td>Speed</td>
+            <td id="data_1_speed"></td>
+            <td id="data_2_speed"></td>
+        </tr>
+        <tr>
+            <td>Cargo Size</td>
+            <td id="data_1_cargosize"></td>
+            <td id="data_2_cargosize"></td>
+        </tr>
+        <tr>
+            <td>Passengers</td>
+            <td id="data_1_passengers"></td>
+            <td id="data_2_passengers"></td>
+        </tr>
+    </table>
+
+    <script src="starwars.js"></script>
+</body>
+
+</html>

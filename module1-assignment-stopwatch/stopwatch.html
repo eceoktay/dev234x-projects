@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1>Stopwatch Demo</h1>
+        <p id="textTime">0</p>
+        <span>
+            <button id="buttonStartStop">Start/Stop</button>
+            <button id="buttonReset">Reset</button>
+            <button id="buttonRecordTime">Record Time</button>
+        </span>
+        <p>Past Times</p>
+        <p id="textRecordTimes"></p>
+        <script>
+            var started = false;
+            var interval = null;
+            var time = 0;
+            document.getElementById("buttonStartStop").addEventListener("click", startStop);
+            document.getElementById("buttonReset").addEventListener("click", reset);
+            document.getElementById("buttonRecordTime").addEventListener("click", recordTime);
+            document.addEventListener("keydown", function(event) {
+                if (event.key == 's') {
+                    startStop();
+                }
+                else if (event.key == 'r') {
+                    reset();
+                }
+                else if (event.key == 't') {
+                    recordTime();
+                }
+            });
+
+            function startStop() {
+                if (started) {
+                    started = false;
+                    clearInterval(interval);
+                }
+                else {
+                    started = true;
+                    interval = setInterval(function() {
+                        time++;
+                        document.getElementById("textTime").innerHTML = time / 100;
+                    }, 10);
+                }
+            }
+            function reset() {
+                time = 0;
+                document.getElementById("textTime").innerHTML = 0;
+                document.getElementById("textRecordTimes").innerHTML = "";
+            }
+            function recordTime() {
+                document.getElementById("textRecordTimes").innerHTML += document.getElementById("textTime").innerHTML + "<br\>";
+            } 
+        </script> 
+    </body>
+</html>
